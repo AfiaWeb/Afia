@@ -1,0 +1,1069 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #0b0b0b;
+    color: #f4f0e8;
+    font-family: Georgia, "Times New Roman", serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 6vw;
+
+    z-index: 100;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.75),
+        transparent
+    );
+}
+
+.nav-logo {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.nav-logo span,
+.footer-logo span {
+    color: #c9a86a;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 35px;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.navbar nav a {
+    opacity: .7;
+    transition: .3s;
+}
+
+.navbar nav a:hover {
+    opacity: 1;
+    color: #c9a86a;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 70% 35%,
+            rgba(151,118,59,.25),
+            transparent 30%
+        ),
+        linear-gradient(
+            120deg,
+            #050505,
+            #17130d 50%,
+            #050505
+        );
+
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.95),
+            rgba(0,0,0,.5),
+            rgba(0,0,0,.8)
+        );
+
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(255,255,255,.015) 4px
+        );
+
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(900px, 88%);
+
+    margin-left: 10vw;
+}
+
+.eyebrow,
+.section-label {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #c9a86a;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(80px, 15vw, 190px);
+    line-height: .8;
+
+    letter-spacing: 20px;
+    font-weight: 700;
+}
+
+.hero-line {
+    width: 100px;
+    height: 1px;
+
+    background: #c9a86a;
+
+    margin: 35px 0;
+}
+
+.hero h2 {
+    font-size: clamp(34px, 5vw, 65px);
+    line-height: 1.05;
+    font-weight: 400;
+}
+
+.hero h2 span,
+.hero h2 em {
+    color: #c9a86a;
+    font-style: italic;
+}
+
+.hero-description {
+    max-width: 550px;
+
+    margin-top: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.8;
+
+    color: rgba(255,255,255,.65);
+}
+
+.discover-btn {
+    display: inline-flex;
+    gap: 20px;
+    align-items: center;
+
+    margin-top: 40px;
+
+    padding: 15px 25px;
+
+    border: 1px solid rgba(201,168,106,.6);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    transition: .3s;
+}
+
+.discover-btn:hover {
+    background: #c9a86a;
+    color: #111;
+}
+
+.discover-btn span {
+    font-size: 18px;
+}
+
+.hero-bottom {
+    position: absolute;
+    z-index: 3;
+
+    bottom: 30px;
+    left: 6vw;
+    right: 6vw;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,.45);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.intro {
+    min-height: 75vh;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+    padding: 100px 10vw;
+
+    background: #f0ede5;
+    color: #171614;
+}
+
+.intro-number,
+.chapter-number {
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    color: #c9a86a;
+}
+
+.intro-content {
+    max-width: 850px;
+}
+
+.intro h2 {
+    font-size: clamp(45px, 6vw, 85px);
+    line-height: 1;
+
+    font-weight: 400;
+
+    margin-bottom: 35px;
+}
+
+.intro h2 em {
+    color: #a3834e;
+}
+
+.intro-content > p {
+    max-width: 650px;
+
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.quote {
+    border-left: 1px solid #c9a86a;
+
+    padding-left: 25px;
+    margin-top: 35px;
+
+    font-size: 17px;
+    font-style: italic;
+
+    color: #777;
+}
+
+
+/* =========================================
+   CHAPTER
+========================================= */
+
+.chapter {
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.chapter-light {
+    background: #f0ede5;
+    color: #171614;
+}
+
+.chapter-dark {
+    background: #0d0d0d;
+    color: #eee;
+}
+
+.chapter-image {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 50px;
+
+    overflow: hidden;
+}
+
+.chapter-image::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,0,0,.1),
+            rgba(0,0,0,.8)
+        );
+
+    z-index: 1;
+}
+
+.image-label {
+    position: relative;
+    z-index: 2;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+
+    color: white;
+}
+
+.chapter-text {
+    padding: 10vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.chapter-text h2 {
+    font-size: clamp(42px, 5vw, 75px);
+
+    line-height: .98;
+    font-weight: 400;
+
+    margin: 20px 0 35px;
+}
+
+.chapter-text h2 em {
+    color: #c9a86a;
+    font-style: italic;
+}
+
+.chapter-text > p {
+    max-width: 570px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.chapter-text strong {
+    margin-top: 20px;
+
+    font-size: 20px;
+    color: #a3834e;
+}
+
+
+/* =========================================
+   IMAGE PLACEHOLDERS
+========================================= */
+
+.image-childhood {
+    background:
+        linear-gradient(
+            rgba(0,0,0,.2),
+            rgba(0,0,0,.7)
+        ),
+        url("images/childhood.jpg") center/cover;
+}
+
+.image-family {
+    background:
+        linear-gradient(
+            135deg,
+            #30261b,
+            #806342,
+            #17120d
+        );
+}
+
+.image-education {
+    background:
+        linear-gradient(
+            rgba(0,0,0,.2),
+            rgba(0,0,0,.7)
+        ),
+        url("images/education.jpg") center/cover;
+}
+
+.image-love {
+    background:
+        linear-gradient(
+            rgba(0,0,0,.2),
+            rgba(0,0,0,.7)
+        ),
+        url("images/love.jpg") center/cover;
+}
+
+.image-portrait {
+    background:
+        linear-gradient(
+            rgba(0,0,0,.2),
+            rgba(0,0,0,.7)
+        ),
+        url("images/afia.jpg") center/cover;
+}
+
+
+/* =========================================
+   FAMILY
+========================================= */
+
+.family-note {
+    margin-top: 40px;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+
+    line-height: 2;
+
+    color: #c9a86a;
+}
+
+
+/* =========================================
+   EDUCATION WORDS
+========================================= */
+
+.words {
+    display: flex;
+    gap: 25px;
+
+    margin-top: 30px;
+
+    flex-wrap: wrap;
+}
+
+.words span {
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid #c9a86a;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   STRUGGLE
+========================================= */
+
+.struggle-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.struggle-visual {
+    position: relative;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            180deg,
+            #030303,
+            #15120d 70%,
+            #6c4d27
+        );
+
+    overflow: hidden;
+}
+
+.sun-glow {
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background: rgba(211,166,85,.16);
+
+    filter: blur(70px);
+
+    right: -100px;
+    bottom: -100px;
+}
+
+.walk-text {
+    position: absolute;
+
+    right: 8vw;
+    bottom: 10vw;
+
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+
+    font-size: clamp(50px, 8vw, 120px);
+
+    line-height: .8;
+
+    letter-spacing: -5px;
+
+    color: rgba(255,255,255,.06);
+}
+
+
+/* =========================================
+   BIG QUOTE
+========================================= */
+
+.big-quote {
+    max-width: 500px;
+
+    font-size: 22px;
+
+    color: #c9a86a;
+}
+
+
+/* =========================================
+   TURNING POINT
+========================================= */
+
+.turning-point {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201,168,106,.15),
+            transparent 30%
+        ),
+        #080808;
+}
+
+.turning-content {
+    max-width: 800px;
+    padding: 50px;
+}
+
+.turning-content h2 {
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: .9;
+
+    font-weight: 400;
+
+    margin: 25px 0;
+}
+
+.turning-content h2 em {
+    color: #c9a86a;
+}
+
+.turning-content > p {
+    max-width: 600px;
+
+    margin: 15px auto;
+
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #aaa;
+}
+
+.turning-statement {
+    margin-top: 70px;
+
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+
+    font-size: clamp(30px, 5vw, 70px);
+
+    letter-spacing: 8px;
+
+    color: rgba(255,255,255,.08);
+}
+
+
+/* =========================================
+   LOVE
+========================================= */
+
+.highlight-text {
+    font-size: 25px !important;
+
+    color: #a3834e;
+}
+
+
+/* =========================================
+   PERSONALITY
+========================================= */
+
+.personality-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin: 40px 0;
+}
+
+.personality-grid div {
+    padding: 20px;
+
+    border: 1px solid rgba(201,168,106,.2);
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.personality-grid strong {
+    color: #c9a86a;
+}
+
+.personality-grid span {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.small-note {
+    color: #777;
+    font-style: italic;
+}
+
+
+/* =========================================
+   DREAMS
+========================================= */
+
+.dreams {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 70% 40%,
+            rgba(201,168,106,.35),
+            transparent 25%
+        ),
+        linear-gradient(
+            120deg,
+            #020202,
+            #17120b,
+            #020202
+        );
+}
+
+.dream-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 100px,
+            rgba(255,255,255,.015) 101px
+        );
+}
+
+.dream-content {
+    position: relative;
+
+    max-width: 800px;
+
+    margin-left: 12vw;
+}
+
+.dream-content h2 {
+    font-size: clamp(70px, 11vw, 150px);
+
+    line-height: .85;
+
+    font-weight: 400;
+
+    margin: 25px 0 50px;
+}
+
+.dream-content > p {
+    max-width: 550px;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #aaa;
+
+    margin-bottom: 15px;
+}
+
+.money-love {
+    font-size: 32px;
+    font-style: italic;
+
+    color: #c9a86a;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   FUTURE
+========================================= */
+
+.future {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background: #eee9df;
+    color: #171614;
+}
+
+.future-content {
+    max-width: 900px;
+    padding: 60px;
+}
+
+.future h2 {
+    font-size: clamp(60px, 9vw, 130px);
+
+    line-height: .82;
+
+    font-weight: 400;
+
+    margin: 25px 0 50px;
+}
+
+.future h2 em {
+    color: #a3834e;
+}
+
+.future-content > p {
+    max-width: 650px;
+
+    margin: 15px auto;
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+.royalty {
+    margin-top: 80px;
+
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+
+    font-size: clamp(60px, 12vw, 180px);
+
+    letter-spacing: 10px;
+
+    color: #171614;
+}
+
+.royalty-note {
+    font-style: italic;
+
+    color: #777 !important;
+
+    font-size: 14px !important;
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(201,168,106,.2),
+            transparent 25%
+        ),
+        #050505;
+}
+
+.final-content {
+    width: min(800px, 90%);
+}
+
+.final h2 {
+    font-size: clamp(55px, 8vw, 110px);
+
+    line-height: .85;
+
+    font-weight: 400;
+
+    margin: 25px 0 50px;
+}
+
+.final h2 em {
+    color: #c9a86a;
+}
+
+.final-content > p {
+    max-width: 600px;
+
+    margin: 15px auto;
+
+    color: #888;
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.alhamdulillah {
+    margin-top: 70px;
+
+    font-size: clamp(45px, 7vw, 90px);
+
+    font-style: italic;
+
+    color: #c9a86a;
+}
+
+.final-name {
+    margin-top: 70px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 7px;
+}
+
+.final-line {
+    width: 70px;
+    height: 1px;
+
+    background: #c9a86a;
+
+    margin: 25px auto;
+}
+
+.beginning {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px !important;
+
+    letter-spacing: 3px;
+
+    color: #555 !important;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    padding: 60px 30px;
+
+    text-align: center;
+
+    background: #030303;
+
+    border-top: 1px solid rgba(255,255,255,.05);
+}
+
+.footer-logo {
+    font-family: Arial, sans-serif;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    letter-spacing: 7px;
+}
+
+footer p {
+    margin: 15px 0 30px;
+
+    font-style: italic;
+
+    color: #777;
+}
+
+footer span {
+    font-family: Arial, sans-serif;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    color: #555;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        height: 65px;
+        padding: 0 25px;
+    }
+
+    .navbar nav {
+        display: none;
+    }
+
+    .hero-content {
+        margin-left: 8vw;
+    }
+
+    .hero h1 {
+        font-size: 80px;
+        letter-spacing: 10px;
+    }
+
+    .hero-bottom {
+        left: 25px;
+        right: 25px;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+        gap: 50px;
+
+        padding: 90px 8vw;
+    }
+
+    .chapter {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter-image {
+        min-height: 55vh;
+        order: 1;
+    }
+
+    .chapter-text {
+        order: 2;
+
+        padding: 80px 8vw;
+    }
+
+    .chapter-dark .chapter-image {
+        order: 1;
+    }
+
+    .chapter-dark .chapter-text {
+        order: 2;
+    }
+
+    .struggle-section {
+        display: block;
+    }
+
+    .struggle-visual {
+        min-height: 60vh;
+    }
+
+    .personality-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dream-content {
+        margin-left: 8vw;
+        margin-right: 8vw;
+    }
+
+    .dream-content h2 {
+        font-size: 75px;
+    }
+
+    .future-content {
+        padding: 50px 25px;
+    }
+
+    .royalty {
+        letter-spacing: 2px;
+    }
+
+}
